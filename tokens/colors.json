@@ -1,0 +1,236 @@
+{
+  "color": {
+    "base": {
+      "blue": {
+        "100": {
+          "$value": "#E5F1FF"
+        },
+        "500": {
+          "$value": "#007AFF"
+        },
+        "700": {
+          "$value": "#005ECC"
+        }
+      },
+      "green": {
+        "500": {
+          "$value": "#34C759"
+        }
+      },
+      "red": {
+        "500": {
+          "$value": "#FF3B30"
+        }
+      },
+      "white": {
+        "$value": "#FFFFFF"
+      },
+      "black": {
+        "$value": "#000000"
+      },
+      "gray": {
+        "100": {
+          "$value": "#F2F2F7"
+        },
+        "400": {
+          "$value": "#8E8E93"
+        },
+        "600": {
+          "$value": "#3A3A3C"
+        },
+        "800": {
+          "$value": "#1C1C1E"
+        },
+        "900": {
+          "$value": "#121212"
+        }
+      }
+    },
+    "semantic": {
+      "background": {
+        "primary": {
+          "$value": "{color.base.white.value}"
+        },
+        "secondary": {
+          "$value": "{color.base.gray.100.value}"
+        },
+        "interactive_accent": {
+          "$value": "{color.base.blue.500.value}"
+        },
+        "feedback": {
+          "success": {
+            "$value": "rgba(52, 199, 89, 0.1)"
+          },
+          "error": {
+            "$value": "rgba(255, 59, 48, 0.1)"
+          }
+        }
+      },
+      "text": {
+        "primary": {
+          "$value": "{color.base.black.value}"
+        },
+        "secondary": {
+          "$value": "{color.base.gray.400.value}"
+        },
+        "accent": {
+          "$value": "{color.base.blue.500.value}"
+        },
+        "on_accent": {
+          "$value": "{color.base.white.value}"
+        },
+        "feedback": {
+          "success": {
+            "$value": "#28a745"
+          },
+          "error": {
+            "$value": "#dc3545"
+          }
+        }
+      },
+      "border": {
+        "separator": {
+          "$value": "#d1d1d6"
+        },
+        "interactive_accent": {
+          "$value": "{color.base.blue.500.value}"
+        }
+      },
+      "surface": {
+        "raised": {
+          "$value": "{color.base.white.value}"
+        }
+      },
+      "state": {
+        "hover_overlay": {
+          "$value": "rgba(0, 0, 0, 0.04)"
+        },
+        "pressed_overlay": {
+          "$value": "rgba(0, 0, 0, 0.10)"
+        }
+      },
+      "overlay": {
+        "scrim": {
+          "$value": "rgba(0, 0, 0, 0.3)"
+        }
+      },
+      "input": {
+        "border": {
+          "default": {
+            "$value": "{color.base.gray.400.value}"
+          },
+          "focused": {
+            "$value": "{color.base.blue.500.value}"
+          }
+        }
+      }
+    }
+  },
+  "component": {
+    "button": {
+      "primary": {
+        "background": {
+          "$value": "{color.semantic.background.interactive_accent.value}"
+        },
+        "text": {
+          "$value": "{color.semantic.text.on_accent.value}"
+        }
+      }
+    },
+    "card": {
+      "background": {
+        "$value": "{color.semantic.background.secondary.value}"
+      }
+    },
+    "list": {
+      "item": {
+        "separator": {
+          "$value": "{color.semantic.border.separator.value}"
+        },
+        "background_hover": {
+          "$value": "{color.semantic.state.hover_overlay.value}"
+        }
+      }
+    },
+    "tab": {
+      "active": {
+        "indicator": {
+          "$value": "{color.semantic.border.interactive_accent.value}"
+        },
+        "text": {
+          "$value": "{color.semantic.text.accent.value}"
+        }
+      },
+      "inactive": {
+        "text": {
+          "$value": "{color.semantic.text.secondary.value}"
+        }
+      }
+    },
+    "chip": {
+      "background": {
+        "$value": "{color.semantic.background.secondary.value}"
+      }
+    },
+    "banner": {
+      "success": {
+        "background": {
+          "$value": "{color.semantic.background.feedback.success.value}"
+        },
+        "text": {
+          "$value": "{color.semantic.text.feedback.success.value}"
+        }
+      },
+      "error": {
+        "background": {
+          "$value": "{color.semantic.background.feedback.error.value}"
+        },
+        "text": {
+          "$value": "{color.semantic.text.feedback.error.value}"
+        }
+      }
+    },
+    "navigation": {
+      "bar": {
+        "background": {
+          "$value": "{color.semantic.background.primary.value}"
+        }
+      },
+      "bottom": {
+        "item": {
+          "icon_active": {
+            "$value": "{color.semantic.text.accent.value}"
+          },
+          "icon_inactive": {
+            "$value": "{color.semantic.text.secondary.value}"
+          }
+        }
+      }
+    },
+    "textfield": {
+      "border": {
+        "default": {
+          "$value": "{color.semantic.input.border.default.value}"
+        },
+        "focused": {
+          "$value": "{color.semantic.input.border.focused.value}"
+        }
+      }
+    },
+    "fab": {
+      "background": {
+        "$value": "{color.semantic.background.interactive_accent.value}"
+      }
+    },
+    "switch": {
+      "track_selected": {
+        "$value": "{color.semantic.background.interactive_accent.value}"
+      }
+    },
+    "dialog": {
+      "scrim": {
+        "$value": "{color.semantic.overlay.scrim.value}"
+      }
+    }
+  }
+}

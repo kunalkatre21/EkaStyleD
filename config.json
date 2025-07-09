@@ -1,0 +1,73 @@
+{
+  "source": [
+    "tokens.json"
+  ],
+  "platforms": {
+
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "build/web/",
+      "files": [
+        {
+          "destination": "_tokens.css",
+          "format": "css/variables",
+          "options": {
+            "outputReferences": true
+          }
+        }
+      ],
+      "comment": "Generates a single CSS file with CSS Custom Properties for light and dark modes."
+    },
+
+    "ios-swift-assets": {
+      "transformGroup": "ios",
+      "buildPath": "build/ios/",
+      "files": [
+        {
+          "destination": "Assets.xcassets/Colors.colorset",
+          "format": "ios/colors.colorset",
+          "filter": {
+            "$type": "color"
+          },
+          "comment": "Creates .colorset assets for each color, which automatically handle light/dark mode."
+        },
+        {
+          "destination": "GeneratedTokens.swift",
+          "format": "ios-swift/class.swift",
+          "className": "Tokens",
+          "comment": "Generates a single Swift file with all tokens as static properties."
+        }
+      ]
+    },
+
+    "android": {
+      "transformGroup": "android",
+      "buildPath": "build/android/main/res/",
+      "files": [
+        {
+          "destination": "values/colors.xml",
+          "format": "android/resources",
+          "filter": {
+            "$type": "color"
+          },
+          "options": {
+            "selector": ":root",
+            "comment": "The default 'light mode' values."
+          }
+        },
+        {
+          "destination": "values-night/colors.xml",
+          "format": "android/resources",
+          "filter": {
+            "$type": "color"
+          },
+          "options": {
+            "selector": ".dark",
+            "comment": "The 'dark mode' override values."
+          }
+        }
+      ],
+      "comment": "Creates two separate color files for Android's light and dark resource qualifiers."
+    }
+  }
+}
