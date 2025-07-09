@@ -3,45 +3,57 @@
     "base": {
       "blue": {
         "100": {
+          "$type": "color",
           "$value": "#E5F1FF"
         },
         "500": {
+          "$type": "color",
           "$value": "#007AFF"
         },
         "700": {
+          "$type": "color",
           "$value": "#005ECC"
         }
       },
       "green": {
         "500": {
+          "$type": "color",
           "$value": "#34C759"
         }
       },
       "red": {
         "500": {
+          "$type": "color",
           "$value": "#FF3B30"
         }
       },
       "white": {
+        "$type": "color",
         "$value": "#FFFFFF"
       },
       "black": {
+        "$type": "color",
         "$value": "#000000"
       },
       "gray": {
         "100": {
+          "$type": "color",
           "$value": "#F2F2F7"
         },
         "400": {
+          "$type": "color",
           "$value": "#8E8E93"
         },
         "600": {
+          "$type": "color",
           "$value": "#3A3A3C"
         },
         "800": {
+          "$type": "color",
           "$value": "#1C1C1E"
         },
         "900": {
+          "$type": "color",
           "$value": "#121212"
         }
       }
@@ -49,105 +61,128 @@
     "semantic": {
       "background": {
         "primary": {
+          "$type": "color",
           "$value": "{color.base.white.value}"
         },
         "secondary": {
+          "$type": "color",
           "$value": "{color.base.gray.100.value}"
         },
         "interactive_accent": {
+          "$type": "color",
           "$value": "{color.base.blue.500.value}"
         },
         "feedback": {
           "success": {
+            "$type": "color",
             "$value": "rgba(52, 199, 89, 0.1)"
           },
           "error": {
+            "$type": "color",
             "$value": "rgba(255, 59, 48, 0.1)"
           }
         }
       },
       "text": {
         "primary": {
+          "$type": "color",
           "$value": "{color.base.black.value}"
         },
         "secondary": {
+          "$type": "color",
           "$value": "{color.base.gray.400.value}"
         },
         "accent": {
+          "$type": "color",
           "$value": "{color.base.blue.500.value}"
         },
         "on_accent": {
+          "$type": "color",
           "$value": "{color.base.white.value}"
         },
         "feedback": {
           "success": {
+            "$type": "color",
             "$value": "#28a745"
           },
           "error": {
+            "$type": "color",
             "$value": "#dc3545"
           }
         }
       },
       "border": {
         "separator": {
+          "$type": "color",
           "$value": "#d1d1d6"
         },
         "interactive_accent": {
+          "$type": "color",
           "$value": "{color.base.blue.500.value}"
         }
       },
       "surface": {
         "raised": {
+          "$type": "color",
           "$value": "{color.base.white.value}"
         }
       },
       "state": {
         "hover_overlay": {
+          "$type": "color",
           "$value": "rgba(0, 0, 0, 0.04)"
         },
         "pressed_overlay": {
+          "$type": "color",
           "$value": "rgba(0, 0, 0, 0.10)"
         }
       },
       "overlay": {
         "scrim": {
+          "$type": "color",
           "$value": "rgba(0, 0, 0, 0.3)"
         }
       },
       "input": {
         "border": {
           "default": {
+            "$type": "color",
             "$value": "{color.base.gray.400.value}"
           },
           "focused": {
+            "$type": "color",
             "$value": "{color.base.blue.500.value}"
           }
         }
       }
-    }
-  },
+    },
   "component": {
     "button": {
       "primary": {
         "background": {
+          "$type": "color",
           "$value": "{color.semantic.background.interactive_accent.value}"
         },
         "text": {
+          "$type": "color",
           "$value": "{color.semantic.text.on_accent.value}"
         }
       }
     },
     "card": {
       "background": {
+        "$type": "color",
         "$value": "{color.semantic.background.secondary.value}"
       }
     },
     "list": {
       "item": {
         "separator": {
+          "$type": "color",
           "$value": "{color.semantic.border.separator.value}"
         },
         "background_hover": {
+          "$type": "color",
           "$value": "{color.semantic.state.hover_overlay.value}"
         }
       }
@@ -155,37 +190,45 @@
     "tab": {
       "active": {
         "indicator": {
+          "$type": "color",
           "$value": "{color.semantic.border.interactive_accent.value}"
         },
         "text": {
+          "$type": "color",
           "$value": "{color.semantic.text.accent.value}"
         }
       },
       "inactive": {
         "text": {
+          "$type": "color",
           "$value": "{color.semantic.text.secondary.value}"
         }
       }
     },
     "chip": {
       "background": {
+        "$type": "color",
         "$value": "{color.semantic.background.secondary.value}"
       }
     },
     "banner": {
       "success": {
         "background": {
+          "$type": "color",
           "$value": "{color.semantic.background.feedback.success.value}"
         },
         "text": {
+          "$type": "color",
           "$value": "{color.semantic.text.feedback.success.value}"
         }
       },
       "error": {
         "background": {
+          "$type": "color",
           "$value": "{color.semantic.background.feedback.error.value}"
         },
         "text": {
+          "$type": "color",
           "$value": "{color.semantic.text.feedback.error.value}"
         }
       }
@@ -193,15 +236,18 @@
     "navigation": {
       "bar": {
         "background": {
+          "$type": "color",
           "$value": "{color.semantic.background.primary.value}"
         }
       },
       "bottom": {
         "item": {
           "icon_active": {
+            "$type": "color",
             "$value": "{color.semantic.text.accent.value}"
           },
           "icon_inactive": {
+            "$type": "color",
             "$value": "{color.semantic.text.secondary.value}"
           }
         }
@@ -210,27 +256,33 @@
     "textfield": {
       "border": {
         "default": {
+          "$type": "color",
           "$value": "{color.semantic.input.border.default.value}"
         },
         "focused": {
+          "$type": "color",
           "$value": "{color.semantic.input.border.focused.value}"
         }
       }
     },
     "fab": {
       "background": {
+        "$type": "color",
         "$value": "{color.semantic.background.interactive_accent.value}"
       }
     },
     "switch": {
       "track_selected": {
+        "$type": "color",
         "$value": "{color.semantic.background.interactive_accent.value}"
       }
     },
     "dialog": {
       "scrim": {
+        "$type": "color",
         "$value": "{color.semantic.overlay.scrim.value}"
       }
     }
   }
+}
 }

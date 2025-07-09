@@ -1,73 +1,164 @@
 {
-  "source": [
-    "tokens.json"
-  ],
+  "source": ["tokens/**/*.json"],
   "platforms": {
-
     "css": {
       "transformGroup": "css",
-      "buildPath": "build/web/",
+      "buildPath": "build/css/",
       "files": [
         {
-          "destination": "_tokens.css",
-          "format": "css/variables",
+          "destination": "_variables.css",
+          "format": "css/variables"
+        }
+      ]
+    },
+    "android": {
+      "transformGroup": "android",
+      "buildPath": "build/android/",
+      "files": [
+        {
+          "destination": "font_dimens.xml",
+          "format": "android/fontDimens"
+        },
+        {
+          "destination": "colors.xml",
+          "format": "android/colors"
+        }
+      ]
+    },
+    "compose": {
+      "transformGroup": "compose",
+      "buildPath": "build/compose/",
+      "files": [
+        {
+          "destination": "StyleDictionaryColor.kt",
+          "format": "compose/object",
           "options": {
-            "outputReferences": true
+            "className": "StyleDictionaryColor",
+            "packageName": "StyleDictionaryColor"
+          },
+          "filter": {
+            "$type": "color"
+          }
+        },
+        {
+          "destination": "StyleDictionarySize.kt",
+          "format": "compose/object",
+          "options": {
+            "className": "StyleDictionarySize",
+            "packageName": "StyleDictionarySize",
+            "type": "float"
+          },
+          "filter": {
+            "$type": "dimension"
           }
         }
-      ],
-      "comment": "Generates a single CSS file with CSS Custom Properties for light and dark modes."
+      ]
     },
-
-    "ios-swift-assets": {
+    "ios": {
       "transformGroup": "ios",
       "buildPath": "build/ios/",
       "files": [
         {
-          "destination": "Assets.xcassets/Colors.colorset",
-          "format": "ios/colors.colorset",
+          "destination": "StyleDictionaryColor.h",
+          "format": "ios/colors.h",
+          "options": {
+            "className": "StyleDictionaryColor",
+            "type": "StyleDictionaryColorName"
+          },
           "filter": {
             "$type": "color"
-          },
-          "comment": "Creates .colorset assets for each color, which automatically handle light/dark mode."
+          }
         },
         {
-          "destination": "GeneratedTokens.swift",
-          "format": "ios-swift/class.swift",
-          "className": "Tokens",
-          "comment": "Generates a single Swift file with all tokens as static properties."
+          "destination": "StyleDictionaryColor.m",
+          "format": "ios/colors.m",
+          "options": {
+            "className": "StyleDictionaryColor",
+            "type": "StyleDictionaryColorName"
+          },
+          "filter": {
+            "$type": "color"
+          }
+        },
+        {
+          "destination": "StyleDictionarySize.h",
+          "format": "ios/static.h",
+          "options": {
+            "className": "StyleDictionarySize",
+            "type": "float"
+          },
+          "filter": {
+            "$type": "dimension"
+          }
+        },
+        {
+          "destination": "StyleDictionarySize.m",
+          "format": "ios/static.m",
+          "options": {
+            "className": "StyleDictionarySize",
+            "type": "float"
+          },
+          "filter": {
+            "$type": "dimension"
+          }
         }
       ]
     },
-
-    "android": {
-      "transformGroup": "android",
-      "buildPath": "build/android/main/res/",
+    "ios-swift": {
+      "transformGroup": "ios-swift",
+      "buildPath": "build/ios-swift/",
       "files": [
         {
-          "destination": "values/colors.xml",
-          "format": "android/resources",
-          "filter": {
-            "$type": "color"
-          },
+          "destination": "StyleDictionary+Class.swift",
+          "format": "ios-swift/class.swift",
           "options": {
-            "selector": ":root",
-            "comment": "The default 'light mode' values."
+            "className": "StyleDictionaryClass"
           }
         },
         {
-          "destination": "values-night/colors.xml",
-          "format": "android/resources",
-          "filter": {
-            "$type": "color"
-          },
+          "destination": "StyleDictionary+Enum.swift",
+          "format": "ios-swift/enum.swift",
           "options": {
-            "selector": ".dark",
-            "comment": "The 'dark mode' override values."
+            "className": "StyleDictionaryEnum"
+          }
+        },
+        {
+          "destination": "StyleDictionary+Struct.swift",
+          "format": "ios-swift/any.swift",
+          "options": {
+            "className": "StyleDictionaryStruct",
+            "imports": "SwiftUI",
+            "objectType": "struct",
+            "accessControl": "internal"
           }
         }
-      ],
-      "comment": "Creates two separate color files for Android's light and dark resource qualifiers."
+      ]
+    },
+    "ios-swift-separate-enums": {
+      "transformGroup": "ios-swift-separate",
+      "buildPath": "build/ios-swift/",
+      "files": [
+        {
+          "destination": "StyleDictionaryColor.swift",
+          "format": "ios-swift/enum.swift",
+          "options": {
+            "className": "StyleDictionaryColor"
+          },
+          "filter": {
+            "$type": "color"
+          }
+        },
+        {
+          "destination": "StyleDictionarySize.swift",
+          "format": "ios-swift/enum.swift",
+          "options": {
+            "className": "StyleDictionarySize"
+          },
+          "filter": {
+            "$type": "dimension"
+          }
+        }
+      ]
     }
   }
 }
